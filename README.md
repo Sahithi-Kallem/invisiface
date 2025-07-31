@@ -1,33 +1,57 @@
 # InvisiFace: Face Anonymizer and Digital Identity Protection System
 
-InvisiFace is a web-based application that protects individuals from facial recognition technologies and deepfake abuse. It uses adversarial cloaking techniques to modify user images in a way that prevents machine learning models from recognizing the face, without altering it noticeably to humans.
+A comprehensive web-based application that provides face anonymization and digital identity protection using advanced cloaking algorithms.
 
----
+## Features
 
-## 🌐 Features
+- **Face Cloaking**: Upload images and apply invisible perturbations to protect against facial recognition
+- **Side-by-Side Comparison**: View original and cloaked images simultaneously
+- **Protection Verification**: Check if images are protected against face recognition systems
+- **Download Cloaked Images**: Save anonymized images for personal use
+- **Modern UI**: Clean, responsive interface built with React and Tailwind CSS
 
-- Upload an image directly through the website
-- View original and cloaked (protected) versions side by side
-- Download the cloaked image
-- Check if the cloaked image still triggers recognition using face recognition APIs
-- Clean, modern UI built with React and Tailwind CSS
-- Fast backend using Flask or FastAPI
-- Integrates [Fawkes](https://github.com/Shawn-Shan/fawkes) or similar cloaking tools
+## Technology Stack
 
----
+### Frontend
+- React 18
+- Tailwind CSS
+- Axios for API communication
+- File upload with drag & drop
 
-## ⚙️ Tech Stack
+### Backend
+- FastAPI (Python)
+- Face cloaking using Fawkes-inspired algorithms
+- Face recognition verification
+- Image processing with OpenCV and PIL
 
-- **Frontend:** React + Tailwind CSS
-- **Backend:** Python (Flask or FastAPI)
-- **Face Cloaking:** Fawkes (via Python subprocess or direct integration)
-- **Face Detection:** face_recognition or DeepFace
+## Installation
 
----
+### Backend Setup
+```bash
+cd backend
+pip install -r requirements.txt
+python main.py
+```
 
-## 🚀 Getting Started
+### Frontend Setup
+```bash
+cd frontend
+npm install
+npm start
+```
 
-1. **Clone the repo**
-   ```bash
-   git clone <your-repo-url>
-   cd invisiface
+## Usage
+
+1. Upload an image containing faces
+2. Click "Cloak Image" to apply protection
+3. Compare original and cloaked versions side-by-side
+4. Use "Check if Protected" to verify anonymization effectiveness
+5. Download the cloaked image for use
+
+## Privacy & Security
+
+InvisiFace processes all images locally and does not store or transmit personal data to external services. The cloaking algorithms add imperceptible perturbations that fool facial recognition systems while maintaining image quality.
+
+## License
+
+MIT License - See LICENSE file for details
